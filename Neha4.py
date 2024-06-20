@@ -1,19 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[11]:
 
 
 import pandas as pd
@@ -24,7 +8,7 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 
 # Load the dataset
-df = pd.read_csv('E:/Presidency University/Students/train.csv', parse_dates=['date'])
+df = pd.read_csv('train.csv', parse_dates=['date'])
 print(df.head(5))
 
 # Ensure the relevant columns are numeric and handle missing values
@@ -148,14 +132,8 @@ plot_forecast('city1')
 summary = pd.DataFrame.from_dict(performance, orient='index', columns=['MSE'])
 print(summary)
 
-
-# In[12]:
-
-
 daily_sales = df.groupby('date').sum()['sales']
 
-
-# In[ ]:
 
 
 
